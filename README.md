@@ -1,4 +1,4 @@
-## Day Seven / 30 days of React challenge / Country Flags
+## Day Seven / 30 days of React challenge / Animal Shelter
 
 <p  align="center">
 <img  src="https://media.giphy.com/media/rELtRQkhfciSQ/giphy.gif"  height="180" alt="stitch">
