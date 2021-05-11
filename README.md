@@ -5,7 +5,7 @@
 </p>
 
 ## Features :unicorn: 
-* Register a new animal in the shelter
+* Register a rescued animal to the shelter
 
 ## Technologies :mag_right:
 * React :sparkles:
