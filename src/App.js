@@ -22,9 +22,14 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    inputs && setAnimal([...animal, inputs]);
+    inputs && setAnimal([...animal, inputs].reverse());
 
-    setInputs({ name: "", species: "", age: "Puppy", size: "" });
+    setInputs({
+      name: "",
+      species: "",
+      age: "Puppy",
+      size: ""
+    });
     // console.log(animal);
   };
 
