@@ -24,13 +24,13 @@ export default function App() {
     e.preventDefault();
     inputs && setAnimal([...animal, inputs].reverse());
 
+    e.target.reset();
     setInputs({
       name: "",
       species: "",
       age: "Puppy",
       size: ""
     });
-    // console.log(animal);
   };
 
   return (
