@@ -21,9 +21,9 @@ input,
 select {
   display: block;
   background: transparent;
-  width: 15.9rem;
+  width: 15rem;
   padding: 8px 5px;
-  margin: 0.3rem 0.5rem;
+  margin: 0.4rem 0.5rem;
   border-radius: 8px;
   border: 2px solid #f1c95c;
   color: white;
@@ -33,7 +33,7 @@ select {
 
 select {
   color: gray;
-  width: 17rem;
+  width: 15.9rem;
 }
 
 button {
@@ -55,7 +55,6 @@ button {
   background-color: #e59bbf;
 
   color: white;
-  align-items: center;
   padding: 0.2rem 2rem;
 }
 
