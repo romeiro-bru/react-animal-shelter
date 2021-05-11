@@ -3,41 +3,38 @@ import { Header } from "./Components/Header/Header";
 import kitty from "./kitty.svg";
 import { useState } from "react";
 
-const initialVal = [{ name: "", age: "Puppy", species: "", size: "" }];
+const initialVal = [
+  { name: "Nami", species: "Cat", age: "Puppy", size: "Small" },
+  { name: "Milo", species: "Goat", age: "Adult", size: "Medium" }
+];
 
 export default function App() {
-  const [input, setInput] = useState("");
+  const [inputs, setInputs] = useState({});
   const [animal, setAnimal] = useState(initialVal);
 
   const handleInputChange = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value });
-    console.log(input);
-
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
     // const name = e.target.name;
     // const value = e.target.value;
     // const { name, value } = e.target;
+    console.log(inputs);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    input && setAnimal([...animal, input]);
-    setInput("");
-    console.log(animal);
+    inputs && setAnimal([...animal, inputs]);
+
+    setInputs({ name: "", species: "", age: "Puppy", size: "" });
+    // console.log(animal);
   };
 
   return (
     <div className="App">
       <Header />
 
-      <section className="input-animals">
+      <section className="form">
         <img src={kitty} alt={kitty} />
         <form onSubmit={handleSubmit}>
-          <select value={animal.age} name="age" onChange={handleInputChange}>
-            <option value="Puppy">Puppy</option>
-            <option value="Adolescent">Adolescent</option>
-            <option value="Adult">Adult</option>
-            <option value="Elderly">Elderly</option>
-          </select>
           <input
             value={animal.name}
             name="name"
@@ -50,6 +47,12 @@ export default function App() {
             onChange={handleInputChange}
             placeholder=" Species"
           ></input>
+          <select value={animal.age} name="age" onChange={handleInputChange}>
+            <option value="Puppy">Puppy</option>
+            <option value="Adolescent">Adolescent</option>
+            <option value="Adult">Adult</option>
+            <option value="Elderly">Elderly</option>
+          </select>
           <input
             value={animal.size}
             name="size"
@@ -61,14 +64,14 @@ export default function App() {
         </form>
       </section>
 
-      <section className="card-animals">
+      <section className="cards">
         <ul>
           {animal.map((item, index) => (
-            <li key={index}>
-              <p>{item.name}</p>
-              <p>{item.age}</p>
-              <p>{item.species}</p>
-              <p>{item.size}</p>
+            <li key={index} className="card-animals">
+              <p>Name: {item.name}</p>
+              <p>Species: {item.species}</p>
+              <p>Age: {item.age}</p>
+              <p>Size: {item.size}</p>
             </li>
           ))}
         </ul>
