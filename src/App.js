@@ -3,44 +3,76 @@ import { Header } from "./Components/Header/Header";
 import kitty from "./kitty.svg";
 import { useState } from "react";
 
-const animalList = [
-  {
-    age: "Adult",
-    species: "Dog",
-    size: "Medium",
-    health: "Healthy"
-  }
-];
+const initialVal = [{ name: "", age: "Puppy", species: "", size: "" }];
 
 export default function App() {
-  const [animal, setAnimal] = useState(animalList);
+  const [input, setInput] = useState("");
+  const [animal, setAnimal] = useState(initialVal);
 
-  const handleAdd = (e) => {
+  const handleInputChange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+    console.log(input);
+
+    // const name = e.target.name;
+    // const value = e.target.value;
+    // const { name, value } = e.target;
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("New animal");
+    input && setAnimal([...animal, input]);
+    setInput("");
+    console.log(animal);
   };
 
   return (
     <div className="App">
       <Header />
 
-      <section className="search-animals">
+      <section className="input-animals">
         <img src={kitty} alt={kitty} />
-        <form>
-          <select>
-            <option>Puppy</option>
-            <option>Adolescent</option>
-            <option>Adult</option>
-            <option>Elderly</option>
+        <form onSubmit={handleSubmit}>
+          <select value={animal.age} name="age" onChange={handleInputChange}>
+            <option value="Puppy">Puppy</option>
+            <option value="Adolescent">Adolescent</option>
+            <option value="Adult">Adult</option>
+            <option value="Elderly">Elderly</option>
           </select>
-          <input placeholder=" Species"></input>
-          <input placeholder=" Size"></input>
-          <input placeholder=" Health"></input>
-          <button onClick={handleAdd}>Add Animal</button>
+          <input
+            value={animal.name}
+            name="name"
+            onChange={handleInputChange}
+            placeholder=" Name"
+          ></input>
+          <input
+            value={animal.species}
+            name="species"
+            onChange={handleInputChange}
+            placeholder=" Species"
+          ></input>
+          <input
+            value={animal.size}
+            name="size"
+            onChange={handleInputChange}
+            placeholder=" Size"
+          ></input>
+
+          <button type="submit">Add Animal</button>
         </form>
       </section>
 
-      <section></section>
+      <section className="card-animals">
+        <ul>
+          {animal.map((item, index) => (
+            <li key={index}>
+              <p>{item.name}</p>
+              <p>{item.age}</p>
+              <p>{item.species}</p>
+              <p>{item.size}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
