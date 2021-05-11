@@ -16,7 +16,7 @@ body {
 input,
 select {
   background: transparent;
-  width: 15rem;
+  width: 15.9rem;
   padding: 8px 5px;
   margin: 0.3rem 0.5rem;
   border-radius: 8px;
@@ -28,7 +28,7 @@ select {
 
 select {
   color: gray;
-  width: 15.7rem;
+  width: 17rem;
 }
 
 button {
