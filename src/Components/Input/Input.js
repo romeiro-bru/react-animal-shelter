@@ -3,9 +3,21 @@ import { useState } from "react";
 import "./style.css";
 import kitty from "./kitty.svg";
 
+let newDate = new Date();
+let date = newDate.getDate();
+let month = newDate.getMonth() + 1;
+let year = newDate.getFullYear();
+const currDate = `${date}/${month < 10 ? `0${month}` : `${month}`}/${year}`;
+
 const initialVal = [
-  { name: "Nami", species: "Cat", age: "Puppy", size: "Small" },
-  { name: "Milo", species: "Goat", age: "Adult", size: "Medium" }
+  { name: "Nami", species: "Cat", age: "Puppy", size: "Small", date: currDate },
+  {
+    name: "Milo",
+    species: "Goat",
+    age: "Adult",
+    size: "Medium",
+    date: currDate
+  }
 ];
 
 export function Input() {
@@ -75,6 +87,7 @@ export function Input() {
               <p>Species: {item.species}</p>
               <p>Age: {item.age}</p>
               <p>Size: {item.size}</p>
+              <p>Date: {currDate}</p>
             </li>
           ))}
         </ul>
