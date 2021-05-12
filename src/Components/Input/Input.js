@@ -54,12 +54,14 @@ export function Input() {
             name="name"
             onChange={handleInputChange}
             placeholder=" Name"
+            required
           ></input>
           <input
             value={animList.species}
             name="species"
             onChange={handleInputChange}
             placeholder=" Species"
+            required
           ></input>
           <select value={animList.age} name="age" onChange={handleInputChange}>
             <option value="Age">Age</option>
@@ -73,6 +75,7 @@ export function Input() {
             name="size"
             onChange={handleInputChange}
             placeholder=" Size"
+            required
           ></input>
 
           <button type="submit">Register</button>
