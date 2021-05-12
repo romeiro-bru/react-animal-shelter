@@ -9,15 +9,13 @@ const initialVal = [
     name: "Nami",
     species: "Cat",
     age: "Puppy",
-    size: "Small",
-    date: "11/05/2021"
+    size: "Small"
   },
   {
     name: "Milo",
     species: "Goat",
     age: "Adult",
-    size: "Medium",
-    date: "11/05/2021"
+    size: "Medium"
   }
 ];
 
@@ -30,7 +28,7 @@ export function Input() {
     // const name = e.target.name;
     // const value = e.target.value;
     // const { name, value } = e.target;
-    console.log(inputs);
+    // console.log(inputs);
   };
 
   const handleSubmit = (e) => {
@@ -41,7 +39,7 @@ export function Input() {
     setInputs({
       name: "",
       species: "",
-      age: "Puppy",
+      age: "Age",
       size: ""
     });
   };
@@ -64,6 +62,7 @@ export function Input() {
             placeholder=" Species"
           ></input>
           <select value={animList.age} name="age" onChange={handleInputChange}>
+            <option value="Age">Age</option>
             <option value="Puppy">Puppy</option>
             <option value="Adolescent">Adolescent</option>
             <option value="Adult">Adult</option>
