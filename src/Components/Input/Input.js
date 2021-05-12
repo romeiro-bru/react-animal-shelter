@@ -75,7 +75,7 @@ export function Input() {
             placeholder=" Size"
           ></input>
 
-          <button type="submit">Add Animal</button>
+          <button type="submit">Register</button>
         </form>
       </section>
 
