@@ -27,27 +27,17 @@ select {
 }
 
 button {
-  border: none;
-  border-radius: 5px;
   padding: 0.7rem 3em;
   margin: 8px;
-  background: #81b0f1;
+  background: #75a3e4;
+  border: none;
+  border-radius: 5px;
   color: #0f0a19;
   font-weight: bold;
+  outline: none;
+  transition: 0.3s;
 }
 
-.card-animals {
-  display: inline-block;
-  max-width: 15rem;
-  border-radius: 10px;
-  margin: 1rem;
-  text-align: center;
-  background-color: #e59bbf;
-
-  color: white;
-  padding: 0.2rem 2.2rem;
-}
-
-li {
-  list-style: none;
+button:hover {
+  background: #6794d4;
 }
