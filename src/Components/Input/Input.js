@@ -25,15 +25,11 @@ export function Input() {
 
   const handleInputChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
-    // const name = e.target.name;
-    // const value = e.target.value;
-    // const { name, value } = e.target;
-    // console.log(inputs);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    inputs && setAnimList([...animList, inputs].reverse());
+    setAnimList([...animList, inputs].reverse());
 
     e.target.reset();
     setInputs({
