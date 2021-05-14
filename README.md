@@ -5,7 +5,7 @@
 </p>
 
 ## Features :unicorn: 
-* Register a recently rescued animal to the shelter
+* Register a recently rescued animal in the shelter
 * Fill in the input fields with information about the animal
 
 ## Technologies :mag_right:
