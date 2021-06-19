@@ -13,4 +13,4 @@
 * Css :nail_care:
 
 #
-Inspired on: [“Vet Log”](https://github.com/graceaveris/React.js_vet_log) 
+Inspired on: [“Vet Log”](https://github.com/graceaveris/React.js_vet_log) of @graceaveris
