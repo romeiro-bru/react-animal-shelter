@@ -1,5 +1,5 @@
 import React from "react";
-import atom from "./atom.svg";
+import atom from "../../../public/assets/svgs/atom.svg";
 import "./style.css";
 
 export function Header() {

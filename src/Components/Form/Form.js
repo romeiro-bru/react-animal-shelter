@@ -1,25 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import "./style.css";
-import kitty from "./kitty.svg";
+import kitty from "../../../public/assets/svgs/kitty.svg";
 import { Animal } from "../Animal/Animal";
 
 const initialVal = [
   {
     name: "Nami",
     species: "Cat",
-    age: "Puppy",
-    size: "Small"
+    age: "Puppy"
   },
   {
     name: "Milo",
     species: "Goat",
-    age: "Adult",
-    size: "Medium"
+    age: "Adult"
   }
 ];
 
-export function Input() {
+export function Form() {
   const [inputs, setInputs] = useState({});
   const [animList, setAnimList] = useState(initialVal);
 
@@ -42,7 +40,7 @@ export function Input() {
 
   return (
     <>
-      <section className="form">
+      <form className="inline-block">
         <img src={kitty} alt={kitty} />
         <form onSubmit={handleSubmit}>
           <input
@@ -66,17 +64,10 @@ export function Input() {
             <option value="Adult">Adult</option>
             <option value="Elderly">Elderly</option>
           </select>
-          <input
-            value={animList.size}
-            name="size"
-            onChange={handleInputChange}
-            placeholder=" Size"
-            required
-          ></input>
 
           <button type="submit">Register</button>
         </form>
-      </section>
+      </form>
 
       <section className="cards">
         <Animal animList={animList} />

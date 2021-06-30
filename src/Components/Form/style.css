@@ -1,8 +1,8 @@
-.form {
+.inline-block {
   display: inline-block;
 }
 
-.form img {
+form img {
   width: 3.5rem;
   margin: 0.2rem;
 }
