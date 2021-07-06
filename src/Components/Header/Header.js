@@ -7,7 +7,7 @@ export function Header() {
     <>
       <h1>
         30 days of React
-        <img src={atom} alt="atom" />
+        <img src={atom} alt="atom" className="spin" />
       </h1>
       <h2>Day 7</h2>
     </>
