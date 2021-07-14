@@ -16,7 +16,6 @@ export function Animal({ animList }) {
             <p>Name: {item.name}</p>
             <p>Species: {item.species}</p>
             <p>Age: {item.age}</p>
-            <p>Size: {item.size}</p>
             <p>Date: {currDate}</p>
           </li>
         ))}
