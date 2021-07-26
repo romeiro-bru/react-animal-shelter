@@ -40,33 +40,31 @@ export function Form() {
 
   return (
     <>
-      <form className="inline-block">
+      <form onSubmit={handleSubmit} className="inline-block">
         <img src={kitty} alt={kitty} />
-        <form onSubmit={handleSubmit}>
-          <input
-            value={animList.name}
-            name="name"
-            onChange={handleInputChange}
-            placeholder=" Name"
-            required
-          ></input>
-          <input
-            value={animList.species}
-            name="species"
-            onChange={handleInputChange}
-            placeholder=" Species"
-            required
-          ></input>
-          <select value={animList.age} name="age" onChange={handleInputChange}>
-            <option value="Age">Age</option>
-            <option value="Puppy">Puppy</option>
-            <option value="Adolescent">Adolescent</option>
-            <option value="Adult">Adult</option>
-            <option value="Elderly">Elderly</option>
-          </select>
+        <input
+          value={animList.name}
+          name="name"
+          onChange={handleInputChange}
+          placeholder=" Name"
+          required
+        ></input>
+        <input
+          value={animList.species}
+          name="species"
+          onChange={handleInputChange}
+          placeholder=" Species"
+          required
+        ></input>
+        <select value={animList.age} name="age" onChange={handleInputChange}>
+          <option value="Age">Age</option>
+          <option value="Puppy">Puppy</option>
+          <option value="Adolescent">Adolescent</option>
+          <option value="Adult">Adult</option>
+          <option value="Elderly">Elderly</option>
+        </select>
 
-          <button type="submit">Register</button>
-        </form>
+        <button type="submit">Register</button>
       </form>
 
       <section className="cards">
