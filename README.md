@@ -28,6 +28,3 @@ And then run ```yarn start```
 
 Open ```http://localhost:3000``` in your browser
 
-
-#
-Inspired on: [“Vet Log”](https://github.com/graceaveris/React.js_vet_log) of @graceaveris
