@@ -1,8 +1,6 @@
 ## Animal Shelter 
 
-> Register a recently rescued animal in the shelter
-> <br>
-> Fill in the input fields with information about the animal
+> You can register a rescued animal in the shelter.
 <br>
 
 <p  align="left">
