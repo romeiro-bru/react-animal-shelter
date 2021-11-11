@@ -1,12 +1,12 @@
-## Animal Shelter 
+<h1 align="center">Animal Shelter</h1>
 
-> You can register a rescued animal in the shelter.
-<br>
-
-<p  align="left">
+<p  align="center">
 <img  src="https://media.giphy.com/media/xT1R9WBeRzL9BS3wxq/giphy.gif"  height="170" alt="dog">
 </p>
 
+> You can register a rescued animal in the shelter.
+> <br>
+> [sandbox do projeto](https://codesandbox.io/s/github/romeiro-bru/react-animal-shelter)
 
 ## Technologies :mag_right:
 * React :sparkles:
